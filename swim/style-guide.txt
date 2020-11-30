@@ -1,0 +1,22 @@
+font
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+font-family: 'Montserrat', sans-serif;
+
+
+colors
+
+#fff
+#4d80e4
+#000033
+
+#86abf5
+
+
+#b2fcff
+#7ddee2
+
+
+#5ea9f5
+#58aeff

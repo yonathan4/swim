@@ -1,0 +1,443 @@
+
+:root {
+
+    --dark-blue: #000033;
+    --mid-blue: #4d80e4;
+    --light-blue: #68c1ff;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    margin: 0 10%;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.j-c {
+    justify-content: center;
+    align-items: center;
+}
+
+.j-s-b {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.j-s-a {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.f-c {
+    flex-direction: column;
+}
+
+section {
+    padding: 90px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+h1 h2 h3 h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all ease-in-out 250ms;
+}
+
+.hero_btn {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.hero_btn:hover {
+    background: var(--dark-blue);
+    color: var(--light-blue);
+}
+
+.blue_btn {
+    background: var(--dark-blue);
+    color: var(--mid-blue);
+    margin-top: 20px;
+}
+
+.blue_btn:hover {
+    background: var(--mid-blue);
+    color: var(--dark-blue);
+}
+
+.mid_btn {
+    background: var(--mid-blue);
+    color: var(--dark-blue);
+    margin-top: 20px;
+}
+
+.mid_btn:hover {
+    background: var(--dark-blue);
+    color: var(--mid-blue);
+}
+
+
+
+
+
+header {
+    height: 95vh;
+    background-image: url(images/swim7.jpg);
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 70, 0.85);
+}
+
+nav {
+    background-color: transparent;
+    padding-top: 28px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.ham_btn {
+    display: none;
+}
+
+.ham_btn > span {
+    display: none;
+    height: 2px;
+    width: 25px;
+    background: white;
+    transition: ease-in-out .35s;
+    transform-origin: 3px 1px;
+}
+
+.ham_btn > span:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+header.open .container nav .ham_btn > span:first-child {
+    transform: rotate(45deg);
+}
+
+header.open .container nav .ham_btn > span:nth-child(2) {
+    opacity: 0;
+}
+
+header.open .container nav .ham_btn > span:last-child {
+    transform: rotate(-45deg);
+}
+
+.mobile_menu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    flex-direction: column;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-blue);
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all ease-in-out .45s;
+}
+
+.mobile_menu > a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: all ease-in-out .35s;
+}
+
+.mobile_menu > a:hover {
+    color: var(--light-blue);
+}
+
+header.open .container .mobile_menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.nav_btn {
+    position: relative;
+    padding: 8px 0;
+    color: white;
+    letter-spacing: 1.2px;
+    font-size: 18px;
+}
+
+.nav_btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.nav_btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--light-blue);
+    transform-origin: center;
+    transform: scale(0);
+    transition: ease-in-out .35s;
+}
+
+.nav_btn:hover::after {
+    transform: scale(1);
+}
+
+.hero {
+    height: 80%;
+    width: 45%; 
+}
+
+.hero_content {
+    align-items: flex-start;
+}
+
+.hero_content p {
+    margin-bottom: 25px;
+}
+
+.hero_content h1 {
+    color: var(--light-blue);
+}
+
+.blue {
+    background: var(--dark-blue);
+    color: white;
+}
+
+.cyan {
+    background: var(--mid-blue);
+    color: var(--dark-blue);
+}
+
+.course {
+    width: 60%;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.cards {
+    width: 100%;
+}
+
+.card {
+    max-width: 250px;
+    text-align: center;
+    align-items: center;
+}
+
+.course_img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.swim2 {
+    background-image: url(images/swim2.jpg);
+}
+
+.swim3 {
+    background-image: url(images/swim3.jpg);
+}
+
+.swim4 {
+    background-image: url(images/swim4.jpg);
+}
+
+.img_con {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+}
+
+.swim5 {
+    background-image: url(images/swim5.jpg);
+}
+
+.swim6 {
+    background-image: url(images/swim6.jpg);
+}
+
+.content {
+    width: 50%;
+    padding: 0 60px;
+}
+
+.cards2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+}
+
+.cyan_cir {
+    background: var(--mid-blue);
+    color: var(--dark-blue);
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    font-size: 65px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.overlay {
+    background-image: url(images/swim1.jpg);
+    height: 95vh;
+    background-size: cover;
+    background-position: 50px;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 70, 0.85);
+}
+
+.overlay p {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer {
+    background: var(--dark-blue);
+    padding: 100px 0;
+}
+
+.card > a .logo {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .ham_btn {
+        display: block;
+    }
+
+    .ham_btn > span {
+        display: block;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+
+    .hero {
+        width: 100%;
+        height: 80%;
+        justify-content: center;
+    }
+
+    .hero_content {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .course {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 40px;
+    }
+
+    .jack p {
+        font-size: 20px;
+    }
+
+    .cyan > .container {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+        order: 1;
+    }
+
+    .img_con {
+        max-width: 280px;
+        max-height: 280px;
+        margin-bottom: 30px;
+        order: 0;
+    }
+
+    .overlay {
+        background-position: center;
+    }
+
+    footer > .container {
+        flex-direction: column;
+    }
+
+}
